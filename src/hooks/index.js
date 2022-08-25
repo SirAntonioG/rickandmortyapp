@@ -8,7 +8,7 @@ export const useCharacter = (name) => {
       .get(`https://rickandmortyapi.com/api/character`)
       .then((res) => {
         if (res.data) {
-          setCharacters(res.data);
+          setCharacters(res.data.results);
         }
       })
       .catch((e) => {
