@@ -1,19 +1,20 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export const useCharacter = (name) => {
-  const [characters, setCharacters] = useState(null);
+export const useCharacter = (baseUrl) => {
+  const [characters, setCharacters] = useState([]);
   useEffect(() => {
     axios
-      .get(`https://rickandmortyapi.com/api/character`)
+      .get(baseUrl)
       .then((res) => {
         if (res.data) {
           setCharacters(res.data.results);
         }
       })
       .catch((e) => {
+        console.log("error", e);
         setCharacters([]);
       });
-  }, [name]);
+  }, [baseUrl]);
   return characters;
 };

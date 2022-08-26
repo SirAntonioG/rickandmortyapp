@@ -1,13 +1,10 @@
 import React from "react";
-import CharacterCard from "./components/CharacterCard";
-import { useCharacter } from "./hooks";
 import { Container, Box, Typography } from "@mui/material";
 import { blueGrey, grey } from "@mui/material/colors";
 import "./index.css";
+import RandomCharacters from "./components/RandomCharacters";
 
 const App = () => {
-  const character = useCharacter();
-
   return (
     <Container>
       <Container>
@@ -20,10 +17,17 @@ const App = () => {
             alignItems: "center",
           }}
         >
-          <Typography variant="h1">The Rick and Morty API</Typography>
+          <Typography
+            variant="h1"
+            sx={{ fontFamily: "Segoe UI", fontWeight: 900 }}
+          >
+            The Rick and Morty API
+          </Typography>
         </Box>
       </Container>
-      <Container></Container>
+      <Container>
+        <RandomCharacters />
+      </Container>
     </Container>
   );
 };
