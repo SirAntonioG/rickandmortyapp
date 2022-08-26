@@ -7,15 +7,25 @@ const CharacterCard = ({ character }) => {
       sx={{
         width: "45%",
         display: "flex",
-        flexDirection: "row",
         justifyContent: "left",
+        gap: "1em",
         alignItems: "center",
-        borderColor: "rgba(255, 255, 255, 0.5)",
+        backgroundColor: "#3c3e44",
         borderRadius: "15px",
       }}
     >
       <img src={character.image} alt={character.name} className="img-card" />
-      <Box>
+      <Box
+        sx={{
+          width: "45%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "left",
+          gap: "2em",
+          backgroundColor: "#3c3e44",
+          borderRadius: "15px",
+        }}
+      >
         <p>
           {character.name} <br />
           {character.status} - {character.species}
@@ -24,7 +34,9 @@ const CharacterCard = ({ character }) => {
           Last know location: <br />
           <a href={character.location.url}>{character.location.name}</a>
         </p>
-        <p>First seen in:</p>
+        <p>
+          First seen in: <br /> name_chapter
+        </p>
       </Box>
     </Box>
   );

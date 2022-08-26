@@ -1,15 +1,16 @@
 import React from "react";
 import { Container, Box, Typography } from "@mui/material";
-import { blueGrey } from "@mui/material/colors";
 import "./index.css";
 import Characters from "./components/Characters";
 
 const App = () => {
   return (
-    <Container>
-      <Container>
+    <Container maxWidth={false} sx={{ margin: 0, padding: 0 }}>
+      <Container maxWidth={false} sx={{ margin: 0, padding: 0 }}>
         <Box
           sx={{
+            margin: 0,
+            padding: 0,
             height: 288,
             display: "flex",
             justifyContent: "center",
@@ -29,7 +30,10 @@ const App = () => {
         </Box>
       </Container>
       <Container
+        maxWidth={false}
         sx={{
+          margin: 0,
+          padding: "5% 0",
           backgroundColor: "#202329",
           color: "#FFFFFF",
         }}

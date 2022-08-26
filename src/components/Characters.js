@@ -9,7 +9,8 @@ const Characters = () => {
       sx={{
         display: "flex",
         flexWrap: "wrap",
-        gap: "1rem",
+        justifyContent: "center",
+        gap: "2em",
       }}
     >
       {characters.map((character) => {
