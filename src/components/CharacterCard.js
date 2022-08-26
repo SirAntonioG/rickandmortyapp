@@ -3,8 +3,18 @@ import { Box } from "@mui/material";
 
 const CharacterCard = ({ character }) => {
   return (
-    <Box>
-      <img src={character.image} alt="" />
+    <Box
+      sx={{
+        width: "45%",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "left",
+        alignItems: "center",
+        borderColor: "rgba(255, 255, 255, 0.5)",
+        borderRadius: "15px",
+      }}
+    >
+      <img src={character.image} alt={character.name} className="img-card" />
       <Box>
         <p>
           {character.name} <br />

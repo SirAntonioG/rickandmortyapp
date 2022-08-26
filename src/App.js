@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Box, Typography } from "@mui/material";
-import { blueGrey, grey } from "@mui/material/colors";
+import { blueGrey } from "@mui/material/colors";
 import "./index.css";
-import RandomCharacters from "./components/RandomCharacters";
+import Characters from "./components/Characters";
 
 const App = () => {
   return (
@@ -10,7 +10,6 @@ const App = () => {
       <Container>
         <Box
           sx={{
-            width: "100%",
             height: 288,
             display: "flex",
             justifyContent: "center",
@@ -19,14 +18,23 @@ const App = () => {
         >
           <Typography
             variant="h1"
-            sx={{ fontFamily: "Segoe UI", fontWeight: 900 }}
+            sx={{
+              fontFamily: "Segoe UI",
+              fontWeight: 900,
+              color: "#202329",
+            }}
           >
             The Rick and Morty API
           </Typography>
         </Box>
       </Container>
-      <Container>
-        <RandomCharacters />
+      <Container
+        sx={{
+          backgroundColor: "#202329",
+          color: "#FFFFFF",
+        }}
+      >
+        <Characters />
       </Container>
     </Container>
   );
