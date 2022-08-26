@@ -1,7 +1,16 @@
 import React from "react";
 import { Box } from "@mui/material";
+import CircleIcon from "@mui/icons-material/Circle";
 
 const CharacterCard = ({ character }) => {
+  const characterUrl = `https://rickandmortyapi.com/api/character/${character.id}`;
+  const iconColor =
+    character.status === "Alive"
+      ? "green"
+      : character.status === "Dead"
+      ? "red"
+      : "gray";
+  console.log("iconColor: ", iconColor);
   return (
     <Box
       sx={{
@@ -27,7 +36,10 @@ const CharacterCard = ({ character }) => {
         }}
       >
         <p>
-          {character.name} <br />
+          <a href={characterUrl}>{character.name}</a> <br />
+          <CircleIcon
+            sx={{ color: `${iconColor}`, fontSize: 10 }}
+          ></CircleIcon>{" "}
           {character.status} - {character.species}
         </p>
         <p>
