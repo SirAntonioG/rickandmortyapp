@@ -9,6 +9,10 @@ const CharacterPage = () => {
   const id = useParams().id;
   const character = useFetch(`https://rickandmortyapi.com/api/character/${id}`);
   const dataCharacter = character ? character : {};
+  const characterOrigin = dataCharacter.origin ? dataCharacter.origin.name : "";
+  const characterLocation = dataCharacter.location
+    ? dataCharacter.location.name
+    : "";
   const iconColor =
     dataCharacter.status === "Alive"
       ? "green"
@@ -53,11 +57,11 @@ const CharacterPage = () => {
             {dataCharacter.status} - {dataCharacter.species} <br />
             {dataCharacter.gender} <br />
             {"origin"}
-            <ArrowForwardIosIcon sx={{ fontSize: 12 }} />{" "}
-            {dataCharacter.origin.name} <br />
+            <ArrowForwardIosIcon sx={{ fontSize: 12 }} /> {characterOrigin}{" "}
+            <br />
             {"location"}
-            <ArrowForwardIosIcon sx={{ fontSize: 12 }} />{" "}
-            {dataCharacter.location.name}
+            <ArrowForwardIosIcon sx={{ fontSize: 12 }} /> {characterLocation}{" "}
+            <br />
           </Typography>
         </Box>
       </Container>
