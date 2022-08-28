@@ -21,7 +21,7 @@ const CharacterPage = () => {
       sx={{
         backgroundColor: "#202329",
         color: "#FFFFFF",
-        padding: "25px",
+        padding: "50px",
       }}
     >
       <Container>
@@ -52,9 +52,10 @@ const CharacterPage = () => {
             ></CircleIcon>{" "}
             {dataCharacter.status} - {dataCharacter.species} <br />
             {dataCharacter.gender} <br />
-            {dataCharacter.origin.name}{" "}
-            <ArrowBackIosIcon sx={{ fontSize: 12 }} />
-            {"origin | location "}
+            {"origin"}
+            <ArrowForwardIosIcon sx={{ fontSize: 12 }} />{" "}
+            {dataCharacter.origin.name} <br />
+            {"location"}
             <ArrowForwardIosIcon sx={{ fontSize: 12 }} />{" "}
             {dataCharacter.location.name}
           </Typography>
