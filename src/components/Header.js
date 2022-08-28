@@ -11,6 +11,7 @@ const Header = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "#ffffff",
       }}
     >
       <Typography
@@ -19,7 +20,6 @@ const Header = () => {
           fontFamily: "Segoe UI",
           fontWeight: 900,
           color: "#202329",
-          backgroundColor: "#ffffff",
         }}
       >
         The Rick and Morty API

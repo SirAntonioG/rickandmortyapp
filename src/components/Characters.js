@@ -4,7 +4,6 @@ import { useFetch } from "../hooks/useFetch";
 
 const Characters = () => {
   const characters = useFetch(`https://rickandmortyapi.com/api/character`);
-  console.log("characters", characters);
   const charactersAux = characters ? characters.results : [];
   // const charactersAux2 = charactersAux.map((c) => {
   //   const episodeUrl = c.episode[0];

@@ -1,16 +1,15 @@
 import React from "react";
 import { Box } from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
+import { Link } from "react-router-dom";
 
 const CharacterCard = ({ character }) => {
-  const characterUrl = `https://rickandmortyapi.com/api/character/${character.id}`;
   const iconColor =
     character.status === "Alive"
       ? "green"
       : character.status === "Dead"
       ? "red"
       : "gray";
-  console.log("iconColor: ", iconColor);
   return (
     <Box
       sx={{
@@ -36,7 +35,7 @@ const CharacterCard = ({ character }) => {
         }}
       >
         <p>
-          <a href={characterUrl}>{character.name}</a> <br />
+          <Link to={`character/${character.id}`}>{character.name}</Link> <br />
           <CircleIcon
             sx={{ color: `${iconColor}`, fontSize: 10 }}
           ></CircleIcon>{" "}

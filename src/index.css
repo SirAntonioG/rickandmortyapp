@@ -7,7 +7,6 @@ body {
   font-family: -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
-    Roboto,
     Helvetica,
     Arial,
     sans-serif,
@@ -22,6 +21,11 @@ body {
   max-width: 45%;
   height: auto;
   border-radius: 15px 0px 0px 15px;
+}
+.img-data-character {
+  width: 30%;
+  height: auto;
+  border-radius: 15px;
 }
 a {
   color: inherit;
